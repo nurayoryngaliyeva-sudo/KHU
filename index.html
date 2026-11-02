@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d0d0d">
+  <meta name="description" content="FoxTatu — тату-студия. Подбор стиля, портфолио мастеров и запись на сеанс.">
+  <title>FoxTatu — Тату Студия</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="header">
+    <div class="nav-container">
+      <a class="logo" href="#home" aria-label="FoxTatu — на главную">
+        <span class="logo-emoji" aria-hidden="true">🦊</span>
+        <span>Fox<span class="logo-accent">Tatu</span></span>
+      </a>
+
+      <button class="burger" id="burgerBtn" type="button"
+        aria-label="Открыть меню" aria-controls="navMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Главная навигация">
+        <a href="#about">О нас</a>
+        <a href="#services">Стиль &amp; Цены</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#booking">Запись</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" type="button">☀️ Светлая тема</button>
+        <button class="button button-small" id="openAuthBtn" type="button">Войти</button>
+        <div class="user-info hidden" id="userInfo">
+          <span id="userNameDisplay"></span>
+          <button class="button button-small button-outline" id="logoutBtn" type="button">Выйти</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">ТВОЯ ИСТОРИЯ — ТВОЁ ИСКУССТВО</p>
+        <h1 class="hero-title">Татуировка с <span class="accent-text">характером</span></h1>
+        <p class="hero-subtitle">Создаём уникальные эскизы и воплощаем идеи в искусство на твоей коже.</p>
+        <div class="hero-actions">
+          <a class="button" href="#booking">Записаться на сеанс</a>
+          <a class="button button-outline" href="#portfolio">Смотреть портфолио</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-mark">🦊</div>
+        <span class="hero-art-caption">FOX TATU STUDIO</span>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">ПОЧЕМУ FOX TATU</p>
+        <h2>Искусство, созданное <span class="accent-text">для тебя</span></h2>
+        <p>Внимание к деталям, индивидуальный подход и комфорт на каждом этапе.</p>
+      </div>
+      <div class="about-grid">
+        <article class="about-card fancy-border">
+          <div class="card-icon" aria-hidden="true">✍️</div>
+          <h3>Индивидуальный эскиз</h3>
+          <p>Разрабатываем идею вместе с тобой, чтобы татуировка отражала именно твою историю.</p>
+        </article>
+        <article class="about-card fancy-border">
+          <div class="card-icon" aria-hidden="true">🧼</div>
+          <h3>Безопасность и стерильность</h3>
+          <p>Соблюдаем гигиенические требования и внимательно относимся к каждому клиенту.</p>
+        </article>
+        <article class="about-card fancy-border">
+          <div class="card-icon" aria-hidden="true">🦊</div>
+          <h3>Свой стиль</h3>
+          <p>Помогаем подобрать стиль, размер и расположение будущей татуировки.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">СТИЛИ И УСЛУГИ</p>
+        <h2>Найди свой <span class="accent-text">стиль</span></h2>
+        <p>Стоимость зависит от размера, сложности и места нанесения. Точную цену мастер назовёт после обсуждения идеи.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card"><span class="service-symbol">◉</span><h3>Реализм</h3><p>Детализированные изображения, портреты и объёмные композиции.</p><span class="service-note">Цена — по эскизу</span></article>
+        <article class="service-card"><span class="service-symbol">✳</span><h3>Графика</h3><p>Чёткие линии, контраст, геометрия и выразительные детали.</p><span class="service-note">Цена — по эскизу</span></article>
+        <article class="service-card"><span class="service-symbol">⌁</span><h3>Минимализм</h3><p>Лаконичные символы и небольшие татуировки со смыслом.</p><span class="service-note">Цена — по эскизу</span></article>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio">
+      <div class="section-heading">
+        <p class="eyebrow">НАШИ РАБОТЫ</p>
+        <h2>Портфолио <span class="accent-text">FoxTatu</span></h2>
+        <p>Примеры направлений, в которых мы работаем.</p>
+      </div>
+      <div class="portfolio-filters" role="group" aria-label="Фильтр портфолио">
+        <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">Все работы</button>
+        <button class="filter-btn" type="button" data-filter="realism" aria-pressed="false">Реализм</button>
+        <button class="filter-btn" type="button" data-filter="graphics" aria-pressed="false">Графика</button>
+        <button class="filter-btn" type="button" data-filter="minimal" aria-pressed="false">Минимализм</button>
+      </div>
+      <div class="portfolio-grid">
+        <article class="portfolio-item realism">
+          <div class="portfolio-img radial-bg bg-fox" role="img" aria-label="Лиса — концепт реализма"><span>🦊</span></div>
+          <div class="portfolio-info"><h3>Лисья история</h3><p>Реализм</p></div>
+        </article>
+        <article class="portfolio-item graphics">
+          <div class="portfolio-img radial-bg bg-graphic" role="img" aria-label="Графическая композиция"><span>✳</span></div>
+          <div class="portfolio-info"><h3>Геометрия</h3><p>Графика</p></div>
+        </article>
+        <article class="portfolio-item minimal">
+          <div class="portfolio-img radial-bg bg-minimal" role="img" aria-label="Минималистичный эскиз"><span>⌁</span></div>
+          <div class="portfolio-info"><h3>Тонкая линия</h3><p>Минимализм</p></div>
+        </article>
+        <article class="portfolio-item realism">
+          <div class="portfolio-img radial-bg bg-moon" role="img" aria-label="Луна и декоративные элементы"><span>☾</span></div>
+          <div class="portfolio-info"><h3>Лунный мотив</h3><p>Реализм</p></div>
+        </article>
+      </div>
+    </section>
+
+    
+<section class="tattoo-catalog" id="tattoo-catalog">
+  <div class="container">
+    <h2>Каталог эскизов</h2>
+    <p>Выбери стиль и найди подходящий эскиз для своей татуировки.</p>
+
+    <div class="catalog-controls">
+      <input
+        type="text"
+        id="tattooSearch"
+        placeholder="Поиск эскиза..."
+      >
+
+      <select id="tattooCategory">
+        <option value="all">Все категории</option>
+        <option value="animals">Животные</option>
+        <option value="flowers">Цветы</option>
+        <option value="dark">Dark style</option>
+      </select>
+
+      <select id="tattooSort">
+        <option value="default">По умолчанию</option>
+        <option value="cheap">Сначала дешевле</option>
+        <option value="expensive">Сначала дороже</option>
+      </select>
+    </div>
+
+    <p id="catalogResult">Найдено эскизов: 6</p>
+
+    <div id="tattooCatalog" class="tattoo-grid"></div>
+  </div>
+</section>
+
+
+    <section class="section booking-section" id="booking">
+      <div class="booking-copy">
+        <p class="eyebrow">СДЕЛАЙ ПЕРВЫЙ ШАГ</p>
+        <h2>Готов к своей <span class="accent-text">татуировке?</span></h2>
+        <p>Оставь заявку — мы свяжемся с тобой, обсудим идею и поможем выбрать время.</p>
+        <div class="booking-points"><p>✓ Обсуждение идеи и стиля</p><p>✓ Индивидуальный подход</p><p>✓ Ответ на вопросы до сеанса</p></div>
+      </div>
+      <form class="booking-form" id="bookingForm">
+        <label for="bookName">Твоё имя</label>
+        <input id="bookName" name="name" type="text" placeholder="Как к тебе обращаться?" autocomplete="name" required>
+        <label for="bookPhone">Телефон</label>
+        <input id="bookPhone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+        <label for="bookStyle">Интересующий стиль</label>
+        <select id="bookStyle" name="style" required>
+          <option value="">Выбери стиль</option><option value="realism">Реализм</option><option value="graphics">Графика</option><option value="minimal">Минимализм</option><option value="other">Пока не знаю</option>
+        </select>
+        <button class="button button-full" type="submit">Отправить заявку</button>
+        <p class="form-note">Нажимая кнопку, ты соглашаешься на обработку данных для обратной связи.</p>
+      </form>
+    </section>
+
+    <section class="section styleguide-section" id="styleguide">
+      <div class="section-heading">
+        <p class="eyebrow">ДИЗАЙН-СИСТЕМА</p>
+        <h2>Стильгайд <span class="accent-text">FoxTatu</span></h2>
+        <p>Основные элементы интерфейса и состояния компонентов.</p>
+      </div>
+      <div class="styleguide-panel">
+        <div class="styleguide-toolbar">
+          <h3>Тема оформления</h3>
+          <button class="theme-toggle" id="styleThemeToggle" type="button">☀️ Светлая тема</button>
+        </div>
+        <div class="demo-tabs" role="tablist" aria-label="Разделы стайлгайда">
+          <button class="demo-tab active" type="button" role="tab" id="demoTabColors" aria-selected="true" aria-controls="demoTabContent" data-tab="colors">Цвета</button>
+          <button class="demo-tab" type="button" role="tab" id="demoTabButtons" aria-selected="false" aria-controls="demoTabContent" data-tab="buttons">Кнопки</button>
+          <button class="demo-tab" type="button" role="tab" id="demoTabForms" aria-selected="false" aria-controls="demoTabContent" data-tab="forms">Формы</button>
+        </div>
+        <div class="demo-tab-content" id="demoTabContent" role="tabpanel" aria-live="polite">Цветовая палитра FoxTatu: чёрный, белый и рыжий.</div>
+        <div class="styleguide-examples">
+          <div class="swatches"><span class="swatch swatch-dark">Тёмный</span><span class="swatch swatch-orange">Рыжий</span><span class="swatch swatch-light">Светлый</span></div>
+          <div class="example-buttons"><button class="button" type="button">Обычная</button><button class="button button-outline" type="button">Контурная</button><button class="button" type="button" disabled>Отключена</button></div>
+          <div class="example-field"><label for="demoInput">Пример поля</label><input id="demoInput" type="text" placeholder="Введите текст"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner"><a class="logo" href="#home"><span aria-hidden="true">🦊</span><span>Fox<span class="logo-accent">Tatu</span></span></a><p>Твоё тело — твоё искусство.</p><a href="#home">Наверх ↑</a></div>
+    <p class="copyright">© <span id="currentYear"></span> FoxTatu. Все права защищены.</p>
+  </footer>
+
+  <div class="modal-overlay hidden" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+    <div class="modal-content">
+      <button class="modal-close" id="closeAuthBtn" type="button" aria-label="Закрыть окно">×</button>
+      <p class="eyebrow">ДОБРО ПОЖАЛОВАТЬ</p>
+      <h2 id="authModalTitle">Твой аккаунт FoxTatu</h2>
+      <div class="auth-tabs" role="tablist" aria-label="Вход или регистрация">
+        <button class="auth-tab active" id="tabLogin" type="button" role="tab" aria-selected="true">Вход</button>
+        <button class="auth-tab" id="tabRegister" type="button" role="tab" aria-selected="false">Регистрация</button>
+      </div>
+      <form id="loginForm" class="auth-form">
+        <label for="loginEmail">Электронная почта</label><input id="loginEmail" name="email" type="email" placeholder="name@example.com" autocomplete="email" required>
+        <label for="loginPassword">Пароль</label>
+        <div class="password-field"><input id="loginPassword" name="password" type="password" placeholder="Введи пароль" autocomplete="current-password" required><button class="toggle-pass" type="button" data-target="loginPassword" aria-label="Показать пароль">Показать</button></div>
+        <label class="checkbox-label"><input type="checkbox" id="rememberMe"> Запомнить меня на этом устройстве</label>
+        <button class="button button-full" type="submit">Войти</button>
+        <p class="form-note">Демо-вход: fox@tatu.ru, пароль 123456.</p>
+      </form>
+      <form id="registerForm" class="auth-form hidden">
+        <label for="regName">Имя</label><input id="regName" name="name" type="text" placeholder="Твоё имя" autocomplete="name" required>
+        <label for="regEmail">Электронная почта</label><input id="regEmail" name="email" type="email" placeholder="name@example.com" autocomplete="email" required>
+        <label for="regPassword">Пароль</label>
+        <div class="password-field"><input id="regPassword" name="password" type="password" placeholder="Не менее 6 символов" autocomplete="new-password" minlength="6" required><button class="toggle-pass" type="button" data-target="regPassword" aria-label="Показать пароль">Показать</button></div>
+        <button class="button button-full" type="submit">Создать аккаунт</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
